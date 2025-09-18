@@ -5,7 +5,7 @@ class Solution {
 public:
     vector<vector<int>> result;
 
-    int twoSum(vector<int> nums, int target, int i, int j) {
+    void twoSum(vector<int> nums, int target, int i, int j) {
         while (i < j) {
             if (nums[i] + nums[j] > target) {
                 j--;
@@ -24,11 +24,9 @@ public:
                 j--;
             }
         }
-    }
-}
+    }   
 
-vector<vector<int>>
-threeSum(vector<int>& nums) {
+vector<vector<int>> threeSum(vector<int>& nums) {
     int n = nums.size();
 
     if (n < 3) {
